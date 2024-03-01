@@ -1,7 +1,7 @@
 FROM node:14.8
-WORKDIR /app
+WORKDIR /
 COPY ./package.json ./package.json
 COPY ./src ./src
-RUN npm install --legacy-peer-deps
+RUN yarn install 
 EXPOSE 4000
 CMD ["yarn", "server"]
